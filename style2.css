@@ -1,0 +1,354 @@
+/* Root Variables */
+:root {
+    --bg-light: #f4f4f9;
+    --text-dark: #333333;
+    --accent-color: #5A5A5A;
+    --button-color: #4CAF50;
+    --hover-color: #3E8E41;
+    --hero-bg: #dfe6e9;
+    --footer-bg: #333333;
+    --footer-text: #f4f4f9;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* Header and Navigation */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--hover-color);
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--accent-color);
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    width: 200px;
+    background-color: #f9f9f9;
+}
+
+.search-bar input[type="text"]::placeholder {
+    color: var(--accent-color);
+}
+
+.search-bar .search-button {
+    background-color: var(--button-color);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.search-bar .search-button img {
+    width: 20px;
+    filter: invert(100%);
+}
+
+/* Icons */
+.nav-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-icons .icon {
+    width: 25px;
+    cursor: pointer;
+    filter: grayscale(100%) brightness(70%);
+    transition: filter 0.3s ease;
+}
+
+.nav-icons .icon:hover {
+    filter: grayscale(0%) brightness(100%);
+}
+
+/* Hero Section */
+.hero-section-collection {
+    background-image: url('images/hero-collection.jpg');
+    background-size: cover;
+    height: 400px;
+    position: relative;
+}
+
+.overlay {
+    background-image: url(images/pexels-minan1398-1004014.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+
+}
+
+.btn-hero {
+    background-color: var(--button-color);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn-hero:hover {
+    background-color: var(--hover-color);
+}
+
+/* Main Collection */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.sidebar {
+    width: 20%;
+    padding-right: 20px;
+}
+
+.sidebar h3, .sidebar h4 {
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.price-range {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.price-range input[type="number"] {
+    width: 80px;
+    padding: 5px;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Product Grid */
+.product-grid {
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.image-container {
+    position: relative;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-card h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 18px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.btn-add-cart {
+    background-color: var(--button-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-add-cart:hover {
+    background-color: var(--hover-color);
+}
+
+.product-label.sale {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 10%;
+}
+
+.footer-col {
+    width: 30%;
+    padding: 0 20px;
+}
+
+.footer-col h4 {
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li a {
+    color: var(--footer-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .product-grid {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links,
+    .nav-icons {
+        display: none;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-bar input[type="text"] {
+        width: calc(100% - 40px);
+    }
+}

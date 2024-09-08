@@ -1,0 +1,418 @@
+/* Root Variables for Clean and Elegant Design */
+:root {
+    --bg-light: #f4f4f9;        /* Light gray background */
+    --text-dark: #333333;       /* Dark, sophisticated text color */
+    --accent-color: #5A5A5A;    /* Muted gray for accents */
+    --button-color: #4CAF50;    /* Clean, modern green for buttons */
+    --hover-color: #3E8E41;     /* Darker green on hover */
+    --hero-bg: #dfe6e9;         /* Soft, subtle background color */
+    --footer-bg: #333333;
+    --footer-text: #f4f4f9;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+/* Header and Navigation */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif; /* Clean and modern */
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--hover-color);
+}
+
+/* Search Bar Styles */
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--accent-color);
+    border-radius: 25px;
+    overflow: hidden;
+    margin-right: 20px;  /* Add some space between search and icons */
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    outline: none;
+    width: 200px;
+    transition: width 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+.search-bar input[type="text"]::placeholder {
+    color: var(--accent-color);
+}
+
+.search-bar .search-button {
+    background-color: var(--button-color);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.search-bar .search-button img {
+    width: 20px;
+    filter: invert(100%); /* Invert to match classy color scheme */
+}
+
+/* Account and Cart Icon */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between icons */
+}
+
+.nav-icons .icon {
+    width: 25px;
+    cursor: pointer;
+    filter: grayscale(100%) brightness(70%); /* Metallic look */
+    transition: filter 0.3s ease;
+}
+
+.nav-icons .icon:hover {
+    filter: grayscale(0%) brightness(100%); /* Highlights on hover */
+}
+
+/* Responsive Search Bar */
+@media (max-width: 768px) {
+    .search-bar {
+        display: none; /* Hide search bar on small screens */
+    }
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--hero-bg);
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-image: url(images/pexels-sairam-rasa-587546-3419331.jpg);  /* Classy watch background */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.hero-content {
+    z-index: 1;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Subtle overlay for better text visibility */
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.shop-button {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.shop-button:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-5px);
+}
+
+/* Featured Products Section */
+.featured-products {
+    padding: 50px 5%;
+    background-color: white;
+    text-align: center;
+}
+
+.featured-products h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.product img {
+    /* Increase the image size */
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* You can adjust this value as needed */
+    object-fit: cover;
+    border-radius: 8px; /* For rounded corners */
+    transition: transform 0.3s ease; /* For a smooth hover effect */
+}
+
+.product {
+    /* Keep the existing styles */
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 15px; /* Reduce padding to allow more space for the image */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the image */
+.product img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* If the product has a description or price, reduce the space around it */
+.product .description, .product .price {
+    margin-top: 10px; /* Reduce space between elements */
+}
+
+
+.product h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.product p {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.product-button {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-button:hover {
+    background-color: var(--hover-color);
+}
+
+/* Categories Section */
+.categories {
+    padding: 50px 5%;
+    background-color: var(--bg-light);
+    text-align: center;
+}
+
+.categories h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.category-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.category {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.category:hover {
+    transform: translateY(-10px);
+}
+
+.category img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.category h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+/* Customer Reviews Section */
+.reviews {
+    padding: 50px 5%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.reviews h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.review-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.review {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    font-style: italic;
+    border-radius: 8px;
+}
+
+.review p {
+    margin-bottom: 15px;
+}
+
+.review span {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* Newsletter Section */
+.newsletter {
+    padding: 50px 5%;
+    background-color: var(--hero-bg);
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.newsletter p {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 10px;
+    font-size: 1rem;
+    width: 300px;
+    margin-right: 10px;
+    border: 1px solid var(--accent-color);
+    border-radius: 25px;
+}
+
+.newsletter-form .subscribe-button {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-button:hover {
+    background-color: var(--hover-color);
+}
+
+/* Footer Section */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 50px 5%;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-column h3 {
+    margin-bottom: 20px;
+}
+
+.footer-column p {
+    margin-bottom: 10px;
+}
+
+.footer-column img {
+    width: 150px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .shop-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .product-grid, .category-grid, .review-grid, .footer-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product, .review {
+        width: 80%;
+    }
+
+    .footer-grid {
+        text-align: center;
+    }
+}
